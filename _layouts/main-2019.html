@@ -6,8 +6,8 @@
     <title>IEEE VIS 2019</title>
 
     <!-- <link type="text/css" rel="stylesheet" media="all" href="/css/all.css" />
-		<link type="text/css" rel="stylesheet" media="print" href="/css/print.css" /> -->
-		<link rel="stylesheet" href="/dist/style.css">
+    <link type="text/css" rel="stylesheet" media="print" href="/css/print.css" /> -->
+    <link rel="stylesheet" href="/dist/style.css">
 
     <script src="/js/d3.v4.min.js"></script>
     <script src="/js/sponsors.js"></script>
@@ -16,56 +16,113 @@
   <body class="sidebars" >
     <div id="header-region" class="clear-block">
       <div id="header_bar" class="clear-block">
-	<div id="block-block-3" class="clear-block block block-block">
-	  <div class="content">
-	    <div id="header_text"></div>
-	    <img style="margin-left: 1px" src="/assets/VIS-webbanner2019.jpg" alt="VIS 2019 banner"/>
-	  </div>
-	</div>
+  <div id="block-block-3" class="clear-block block block-block">
+    <div class="content">
+      <div id="header_text"></div>
+      <img style="margin-left: 1px" src="/assets/VIS-webbanner2019.jpg" alt="VIS 2019 banner"/>
+    </div>
+  </div>
       </div>
     </div>
     <div id="wrapper">
       <div id="container" class="clear-block">
-	<div id="header">
-	  <div id="logo-floater">
-	  </div>
-	</div>
-	{% include left_sidebar-2019.html %}
-	<div id="center">
-	  <div id="squeeze">
-	    <div class="right-corner">
-	      <div class="left-corner">
-		<h2>{{ page.title }}</h2>
-		<div class="clear-block">
-		  <div id="node-3270" class="node">
-		    <div class="content clear-block">
-		      {{ content }}
-		      <div class="clear-block"><div class="meta"></div></div>
-				</div>
-				
-				<div class="max-w-sm rounded overflow-hidden shadow-lg bg-blue-200">
-						<div class="px-6 py-4">
-							<div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-							<p class="text-gray-700 text-base">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-							</p>
-						</div>
-						<div class="px-6 py-4">
-							<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-							<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-							<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
-						</div>
-					</div>
+  <div id="header">
+    <div id="logo-floater">
+    </div>
+  </div>
+
+  <h1 class="text-2xl m-4">Tailwind components</h1>
+
+  <p class="text-xl mx-4">Pure Tailwind classes</p>
+  
+  <div class="m-4">
+    <table class="text-md w-6/12 rounded">
+        <tbody>
+          <tr class="border-b">
+            <th class="text-left py-3">Name</th>
+            <th class="text-left py-3">Info</th>
+            <th class="text-left py-3">Tags</th>
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="py-3">Person1</td>
+            <td class="py-3">Info1</td>
+            <td>
+              <span class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded">
+                Tag1
+              </span>
+          </td>
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="py-3">Person2</td>
+            <td class="py-3">Info2</td>
+            <td>
+                <span class="mr-3 text-sm bg-red-400 hover:bg-red-700 text-white py-1 px-2 rounded">
+                  Tag2
+                </span>
+            </td>
+          </tr>
+          <tr class="border-b hover:bg-gray-100">
+            <td class="py-3">Person3</td>
+            <td class="py-3">Info3</td>
+            <td>
+                <span class="mr-3 text-sm bg-green-400 hover:bg-green-700 text-white py-1 px-2 rounded">
+                  Tag3
+                </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <p class="text-xl mx-4">Using @apply</p>
+
+  <div class="person hover:text-red-600 w-6/12">
+      <span class="mr-4">Jeremy</span>
+      <span class="line"></span>
+      <span class="ml-4">Micro</span>
+  </div>
+
+  <!-- <p class="text-xl mx-4">Pure Tailwind classes</p>
+  <p class="text-md">No built in way to use transitions or animations. Need to make styles myself or use a plugin</p>
+  <div class="flex m-8 hover:text-red-600">
+      <span class="mr-4">Dolce</span>
+      <span class="h-px bg-gray-300 flex-grow self-center relative overflow-hidden">
+        <span class="transition opacity-0 bg-red-600 absolute bottom-0 top-0 -left-full right-full"></span>
+      </span>
+      <span class="ml-4">Micro</span>
+  </div> -->
 
 
-		  </div>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
-	{% include right_sidebar-2019.html %}
+  <h1 class="text-2xl m-4">Jekyll Partials</h1>
+
+  {% include note.html content="This is my sample note." %}
+
+  {% include table.html name="John" info="likes movies" tag="Little Mermaid" %}
+
+  {% include person_highlight.html person='Dolce' info='Meow' %}
+
+
+  {% include left_sidebar-2019.html %}
+  <div id="center">
+    <div id="squeeze">
+      <div class="right-corner">
+        <div class="left-corner">
+    <h2>{{ page.title }}</h2>
+    <div class="clear-block">
+      <div id="node-3270" class="node">
+        <div class="content clear-block">
+          {{ content }}
+          <div class="clear-block"><div class="meta"></div></div>
+        </div>
+
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+  {% include right_sidebar-2019.html %}
       </div>
     </div>
     {% include footer-2019.html %}

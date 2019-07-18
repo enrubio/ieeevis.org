@@ -2,4 +2,22 @@
 
 @tailwind components;
 
+.person {
+  @apply flex m-8;
+}
+
+.line {
+  @apply h-px bg-gray-300 flex-grow self-center relative overflow-hidden;
+}
+
+.line::after {
+  content: '';
+  @apply opacity-0 bg-red-600 absolute bottom-0 top-0 -left-full right-full; 
+}
+
+.person:hover .line::after {
+  @apply left-0 right-0 opacity-100;
+  transition: left ease .3s, right ease .3s;
+}
+
 @tailwind utilities;
